@@ -1,11 +1,42 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
 import Link from "next/link";
 
 function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const [selectedLanguage, setSelectedLanguage] = useState("es-ES");
+
+  const { t, i18n } = useTranslation("common");
+
+  const languages = [
+    { code: "en-EN", name: "English" },
+    { code: "es-ES", name: "Spanish" },
+  ];
+
+  const openList = (e) => {
+    e.stopPropagation();
+    const options = document.querySelector(".select-options");
+    console.log("options.style.display", options.style.display);
+    if (options.style.display === "none" || !options.style.display)
+      options.style.display = "block";
+    else options.style.display = "none";
+    document.querySelector(".select-styled").classList.toggle("active");
+  };
+
+  const handleItemClick = (e, lang) => {
+    e.stopPropagation();
+    handleLanguageChange(lang);
+    document.querySelector(".select-styled").classList.remove("active");
+    document.querySelector(".select-styled").innerHTML =
+      e.currentTarget.innerHTML;
+    document.querySelector("select").value =
+      e.currentTarget.getAttribute("rel");
+    document.querySelector(".select-options").style.display = "none";
+  };
+
+  const handleLanguageChange = (lang) => {
+    setSelectedLanguage(lang.nativeName);
+    i18n.changeLanguage(lang);
+  };
 
   function handleScroll() {
     const bodyScroll = window.scrollY;
@@ -48,6 +79,10 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
     else closeBtn.style.display = "none";
   }
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <nav
       className={`navbar navbar-expand-lg ${curve ? "nav-crev" : ""} ${
@@ -366,6 +401,31 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
                 <span className="rolling-text">Contact</span>
               </Link>
             </li>
+          </ul>
+        </div>
+
+        <div className="select">
+          <select className="form-control select-hidden" onClick={openList}>
+            {languages.map((language) => (
+              <option key={language.code} value={language.code}>
+                {language.name}
+              </option>
+            ))}
+          </select>
+          <div className="select-styled" onClick={openList}>
+            {i18n.language}
+          </div>
+          <ul className="select-options">
+            {languages.map((language) => (
+              <li
+                rel={language.code}
+                key={language.code}
+                onClick={(e) => handleItemClick(e, language.code)}
+                value={language.code}
+              >
+                {language.name}
+              </li>
+            ))}
           </ul>
         </div>
 

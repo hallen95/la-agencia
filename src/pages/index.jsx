@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 //= Packages
 import Head from "next/head";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 //= Layout
 import Layout from "@/layouts/default";
 //= Components
@@ -47,6 +48,15 @@ function HomeCreativeAgency() {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common", "footer"])),
+      // Will be passed to the page component as props
+    },
+  };
 }
 
 HomeCreativeAgency.getLayout = (page) => <Layout>{page}</Layout>;
