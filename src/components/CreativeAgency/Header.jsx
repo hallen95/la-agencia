@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
+import { useTranslation } from "next-i18next";
 //= Scripts
-import loadBackgroudImages from '@/common/loadBackgroudImages';
+import loadBackgroudImages from "@/common/loadBackgroudImages";
 
 function Header({ lightMode }) {
+  const { t } = useTranslation("common");
+
   useEffect(() => {
     loadBackgroudImages();
   }, []);
@@ -16,32 +19,80 @@ function Header({ lightMode }) {
               <div className="img-assets1 parallax" data-speed="-0.01">
                 <img src="/dark/assets/imgs/svg-assets/claw.svg" alt="" />
               </div>
-              <img src="/dark/assets/imgs/header/c1.jpg" alt="" data-speed="0.01" className="parallax" />
+              <img
+                src="/dark/assets/imgs/header/c1.jpg"
+                alt=""
+                data-speed="0.01"
+                className="parallax"
+              />
             </div>
           </div>
           <div className="col-lg-6 valign">
             <div className="caption text-center full-width md-mb50">
               <div className="mb-30">
-                <svg className="svg-animation star" width="100" height="100" viewBox="0 0 100 100"
-                  fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                  <line y1="50" x2="100" y2="50" vectorEffect="non-scaling-stroke"
-                    stroke="currentColor" style={{ "--index": 1, "--transform": '30deg' }}></line>
-                  <line y1="50" x2="100" y2="50" vectorEffect="non-scaling-stroke"
-                    stroke="currentColor" style={{ "--index": 2, "--transform": '60deg' }}></line>
-                  <line y1="50" x2="100" y2="50" vectorEffect="non-scaling-stroke"
-                    stroke="currentColor" style={{ "--index": 3, "--transform": '90deg' }}></line>
-                  <line y1="50" x2="100" y2="50" vectorEffect="non-scaling-stroke"
-                    stroke="currentColor" style={{ "--index": 4, "--transform": '120deg' }}></line>
-                  <line y1="50" x2="100" y2="50" vectorEffect="non-scaling-stroke"
-                    stroke="currentColor" style={{ "--index": 5, "--transform": '150deg' }}></line>
-                  <line y1="50" x2="100" y2="50" vectorEffect="non-scaling-stroke"
-                    stroke="currentColor" style={{ "--index": 6, "--transform": '180deg' }}></line>
+                <svg
+                  className="svg-animation star"
+                  width="100"
+                  height="100"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
+                >
+                  <line
+                    y1="50"
+                    x2="100"
+                    y2="50"
+                    vectorEffect="non-scaling-stroke"
+                    stroke="currentColor"
+                    style={{ "--index": 1, "--transform": "30deg" }}
+                  ></line>
+                  <line
+                    y1="50"
+                    x2="100"
+                    y2="50"
+                    vectorEffect="non-scaling-stroke"
+                    stroke="currentColor"
+                    style={{ "--index": 2, "--transform": "60deg" }}
+                  ></line>
+                  <line
+                    y1="50"
+                    x2="100"
+                    y2="50"
+                    vectorEffect="non-scaling-stroke"
+                    stroke="currentColor"
+                    style={{ "--index": 3, "--transform": "90deg" }}
+                  ></line>
+                  <line
+                    y1="50"
+                    x2="100"
+                    y2="50"
+                    vectorEffect="non-scaling-stroke"
+                    stroke="currentColor"
+                    style={{ "--index": 4, "--transform": "120deg" }}
+                  ></line>
+                  <line
+                    y1="50"
+                    x2="100"
+                    y2="50"
+                    vectorEffect="non-scaling-stroke"
+                    stroke="currentColor"
+                    style={{ "--index": 5, "--transform": "150deg" }}
+                  ></line>
+                  <line
+                    y1="50"
+                    x2="100"
+                    y2="50"
+                    vectorEffect="non-scaling-stroke"
+                    stroke="currentColor"
+                    style={{ "--index": 6, "--transform": "180deg" }}
+                  ></line>
                 </svg>
               </div>
-              <h4 className="fw-300 mb-15">Digital agency studio</h4>
+
+              <h4 className="fw-300 mb-15">{t("h1")}</h4>
               <h1 className="fw-600 d-rotate wow">
-                <span className="rotate-text">a creative digital</span>
-                <span className="rotate-text">design studio</span>
+                <span className="rotate-text">{t("h2")}</span>
               </h1>
             </div>
           </div>
@@ -55,31 +106,43 @@ function Header({ lightMode }) {
                   <div className="rotate-circle fz-30 text-u">
                     <svg className="textcircle" viewBox="0 0 500 500">
                       <defs>
-                        <path id="textcircle1"
-                          d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
-                        </path>
+                        <path
+                          id="textcircle1"
+                          d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
+                        ></path>
                       </defs>
                       <text>
-                        <textPath xlinkHref="#textcircle1" textLength="900">Creative - Agency - Winner -</textPath>
+                        <textPath xlinkHref="#textcircle1" textLength="900">
+                          Creative - Agency - Winner -
+                        </textPath>
                       </text>
                     </svg>
                   </div>
                   <div className="in-circle text-center">
-                    <h3>A <span className="fw-300 fz-30">+</span></h3>
+                    <h3>
+                      A <span className="fw-300 fz-30">+</span>
+                    </h3>
                   </div>
                 </div>
               </div>
               <div className="text-center">
-                <h6>500k <span className="fz-14">Customers</span></h6>
+                <h6>
+                  500k <span className="fz-14">Customers</span>
+                </h6>
                 <p className="fz-13">Avg rating 4.8 makes us world best.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-pattern bg-img" data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/graph.png`}></div>
+      <div
+        className="bg-pattern bg-img"
+        data-background={`/${
+          lightMode ? "light" : "dark"
+        }/assets/imgs/patterns/graph.png`}
+      ></div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;
