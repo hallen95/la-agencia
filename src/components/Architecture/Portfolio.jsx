@@ -105,7 +105,7 @@ function Portfolio() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Portfolio
+export default Portfolio;

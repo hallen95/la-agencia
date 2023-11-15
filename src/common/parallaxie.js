@@ -1,6 +1,6 @@
 export default function parallaxie(selector, speed = 0.8, startPosition) {
   let elementBg = document.querySelector(selector);
-  let image = elementBg.getAttribute("data-background");
+  let image = elementBg.getAttribute('data-background');
   if (!image) {
     image = window.getComputedStyle(elementBg).backgroundImage;
   }

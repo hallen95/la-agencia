@@ -26,13 +26,13 @@ const swiperOptions = {
   },
   pagination: {
     el: '.showcase-full .swiper-pagination',
-    clickable: true
+    clickable: true,
   },
   navigation: {
     nextEl: '.showcase-full .swiper-button-next',
-    prevEl: '.showcase-full .swiper-button-prev'
-  }
-}
+    prevEl: '.showcase-full .swiper-button-prev',
+  },
+};
 
 function ParallaxSlider() {
   const [loadSwiper, setLoadSwiper] = useState(false);
@@ -47,42 +47,45 @@ function ParallaxSlider() {
 
   return (
     <header className="slider showcase-full">
-      {
-        loadSwiper &&
+      {loadSwiper && (
         <Swiper {...swiperOptions} className="swiper-container parallax-slider">
-          {
-            data.map((item) => (
-              <SwiperSlide key={item.id}>
-                <div className="bg-img valign" data-background={item.background} data-overlay-dark="3">
-                  <div className="container">
-                    <div className="row">
-                      <div className="col-lg-11 offset-lg-1">
-                        <div className="caption">
-                          <h6 className="sub-title mb-30" data-swiper-parallax="-1000">© {item.year} <br /> {item.type}</h6>
-                          <h1>
-                            <Link href="/dark/project-details1">
-                              <span data-swiper-parallax="-2000">{item.title}</span>
-                            </Link>
-                          </h1>
-                        </div>
+          {data.map((item) => (
+            <SwiperSlide key={item.id}>
+              <div className="bg-img valign" data-background={item.background} data-overlay-dark="3">
+                <div className="container">
+                  <div className="row">
+                    <div className="col-lg-11 offset-lg-1">
+                      <div className="caption">
+                        <h6 className="sub-title mb-30" data-swiper-parallax="-1000">
+                          © {item.year} <br /> {item.type}
+                        </h6>
+                        <h1>
+                          <Link href="/dark/project-details1">
+                            <span data-swiper-parallax="-2000">{item.title}</span>
+                          </Link>
+                        </h1>
                       </div>
                     </div>
                   </div>
                 </div>
-              </SwiperSlide>
-            ))
-          }
+              </div>
+            </SwiperSlide>
+          ))}
         </Swiper>
-      }
+      )}
       <div className="slider-contro">
         <div className="swiper-button-next swiper-nav-ctrl cursor-pointer">
           <div>
             <span>Next Slide</span>
           </div>
-          <div><i className="fas fa-chevron-right"></i></div>
+          <div>
+            <i className="fas fa-chevron-right"></i>
+          </div>
         </div>
         <div className="swiper-button-prev swiper-nav-ctrl cursor-pointer">
-          <div><i className="fas fa-chevron-left"></i></div>
+          <div>
+            <i className="fas fa-chevron-left"></i>
+          </div>
           <div>
             <span>Prev Slide</span>
           </div>
@@ -90,7 +93,7 @@ function ParallaxSlider() {
       </div>
       <div className="swiper-pagination dots"></div>
     </header>
-  )
+  );
 }
 
 export default ParallaxSlider;

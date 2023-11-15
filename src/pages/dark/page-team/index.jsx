@@ -12,7 +12,6 @@ import Testimonials from '@/components/InnerPages/Team/Testimonials';
 import CallToAction from '@/components/Startup/CallToAction';
 import Footer from '@/components/Startup/Footer';
 
-
 function PageTeam() {
   useEffect(() => {
     document.body.classList.add('main-bg');
@@ -35,9 +34,9 @@ function PageTeam() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-PageTeam.getLayout = page => <Layout>{page}</Layout>
+PageTeam.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default PageTeam;

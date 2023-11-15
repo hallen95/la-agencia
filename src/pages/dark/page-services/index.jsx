@@ -21,10 +21,10 @@ function PageServices() {
   }, []);
 
   const headerMetadata = {
-    subTitle: "WHAT CAN WE DO ?",
-    title: "We combine our passion for design and code.",
-    text: "SERVICES"
-  }
+    subTitle: 'WHAT CAN WE DO ?',
+    title: 'We combine our passion for design and code.',
+    text: 'SERVICES',
+  };
 
   return (
     <>
@@ -44,9 +44,9 @@ function PageServices() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-PageServices.getLayout = page => <Layout>{page}</Layout>
+PageServices.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default PageServices;

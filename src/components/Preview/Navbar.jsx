@@ -5,16 +5,16 @@ import appData from '@/data/app-data.json';
 
 function Navbar() {
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   function handleScroll() {
     const bodyScroll = window.scrollY;
-    const navbar = document.querySelector(".navbar");
+    const navbar = document.querySelector('.navbar');
 
-    if (bodyScroll > 300) navbar.classList.add("nav-scroll");
-    else navbar.classList.remove("nav-scroll");
+    if (bodyScroll > 300) navbar.classList.add('nav-scroll');
+    else navbar.classList.remove('nav-scroll');
   }
 
   function handleDropdownMouseMove(event) {
@@ -34,7 +34,7 @@ function Navbar() {
   }
 
   function toggleNavbar() {
-    document.querySelector(".navbar .navbar-collapse").classList.toggle("show");
+    document.querySelector('.navbar .navbar-collapse').classList.toggle('show');
   }
 
   return (
@@ -43,9 +43,19 @@ function Navbar() {
         <a className="logo icon-img-100" href="#">
           <img src="/dark/assets/imgs/logo-light.png" alt="logo" />
         </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={toggleNavbar} >
-          <span className="icon-bar"><i className="fas fa-bars"></i></span>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          onClick={toggleNavbar}
+        >
+          <span className="icon-bar">
+            <i className="fas fa-bars"></i>
+          </span>
         </button>
 
         <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
@@ -133,13 +143,34 @@ function Navbar() {
                 </div>
               </div>
             </li> */}
-            <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><span className="rolling-text">Pages</span></a>
+            <li
+              className="nav-item dropdown"
+              onMouseMove={handleDropdownMouseMove}
+              onMouseLeave={handleDropdownMouseLeave}
+            >
+              <a
+                className="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                <span className="rolling-text">Pages</span>
+              </a>
               <div className="dropdown-menu">
-                <Link className="dropdown-item" href="/dark/page-about">About</Link>
-                <Link className="dropdown-item" href="/dark/page-services">Services</Link>
-                <Link className="dropdown-item" href="/dark/page-team">Our Team</Link>
-                <Link className="dropdown-item" href="/dark/page-contact">Contact Us</Link>
+                <Link className="dropdown-item" href="/dark/page-about">
+                  About
+                </Link>
+                <Link className="dropdown-item" href="/dark/page-services">
+                  Services
+                </Link>
+                <Link className="dropdown-item" href="/dark/page-team">
+                  Our Team
+                </Link>
+                <Link className="dropdown-item" href="/dark/page-contact">
+                  Contact Us
+                </Link>
               </div>
             </li>
             {/* <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
@@ -169,30 +200,70 @@ function Navbar() {
                 <li><Link className="dropdown-item" href="/dark/project-details2">Project Details 2</Link></li>
               </ul>
             </li> */}
-            <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <li
+              className="nav-item dropdown"
+              onMouseMove={handleDropdownMouseMove}
+              onMouseLeave={handleDropdownMouseLeave}
+            >
+              <a
+                className="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 <span className="rolling-text">Blogs</span>
               </a>
               <div className="dropdown-menu">
-                <Link className="dropdown-item" href="/dark/blog-classic">Blog Standerd</Link>
-                <Link className="dropdown-item" href="/dark/blog-list">Blog List</Link>
-                <Link className="dropdown-item" href="/dark/blog-half-img">Image Out Frame</Link>
-                <Link className="dropdown-item" href="/dark/blog-details">Blog Details</Link>
+                <Link className="dropdown-item" href="/dark/blog-classic">
+                  Blog Standerd
+                </Link>
+                <Link className="dropdown-item" href="/dark/blog-list">
+                  Blog List
+                </Link>
+                <Link className="dropdown-item" href="/dark/blog-half-img">
+                  Image Out Frame
+                </Link>
+                <Link className="dropdown-item" href="/dark/blog-details">
+                  Blog Details
+                </Link>
               </div>
             </li>
-            <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
-              <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <li
+              className="nav-item dropdown"
+              onMouseMove={handleDropdownMouseMove}
+              onMouseLeave={handleDropdownMouseLeave}
+            >
+              <a
+                className="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
                 <span className="rolling-text">Shop</span>
               </a>
               <div className="dropdown-menu">
-                <Link className="dropdown-item" href="/dark/shop-list">Shop List</Link>
-                <Link className="dropdown-item" href="/dark/shop-product">Single Product</Link>
-                <Link className="dropdown-item" href="/dark/shop-cart">Cart</Link>
-                <Link className="dropdown-item" href="/dark/shop-checkout">Checkout</Link>
+                <Link className="dropdown-item" href="/dark/shop-list">
+                  Shop List
+                </Link>
+                <Link className="dropdown-item" href="/dark/shop-product">
+                  Single Product
+                </Link>
+                <Link className="dropdown-item" href="/dark/shop-cart">
+                  Cart
+                </Link>
+                <Link className="dropdown-item" href="/dark/shop-checkout">
+                  Checkout
+                </Link>
               </div>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" href="/dark/page-contact"><span className="rolling-text">Contact</span></Link>
+              <Link className="nav-link" href="/dark/page-contact">
+                <span className="rolling-text">Contact</span>
+              </Link>
             </li>
           </ul>
         </div>
@@ -204,7 +275,7 @@ function Navbar() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

@@ -30,7 +30,7 @@ header .caption p {
   height: 100vh;
   background-size: cover;
   pointer-events: none;
-  opacity: .3;
+  opacity: 0.3;
 }
 
 .container-xxl {

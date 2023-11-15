@@ -11,22 +11,32 @@ function Contact() {
               <h2 className="fz-50 d-rotate wow">
                 <span className="rotate-text">Let's make your brand brilliant!</span>
               </h2>
-              <p className="fz-15 mt-10">If you would like to work with us or just want to get in touch, we’d love to hear from you!</p>
+              <p className="fz-15 mt-10">
+                If you would like to work with us or just want to get in touch, we’d love to hear from you!
+              </p>
               <div className="phone fz-30 fw-600 mt-30 underline main-color">
                 <a href="#0">+1 840 841 25 69</a>
               </div>
               <ul className="rest social-text d-flex mt-60">
                 <li className="mr-30">
-                  <a href="#0" className="hover-this"><span className="hover-anim">Facebook</span></a>
+                  <a href="#0" className="hover-this">
+                    <span className="hover-anim">Facebook</span>
+                  </a>
                 </li>
                 <li className="mr-30">
-                  <a href="#0" className="hover-this"><span className="hover-anim">Twitter</span></a>
+                  <a href="#0" className="hover-this">
+                    <span className="hover-anim">Twitter</span>
+                  </a>
                 </li>
                 <li className="mr-30">
-                  <a href="#0" className="hover-this"><span className="hover-anim">LinkedIn</span></a>
+                  <a href="#0" className="hover-this">
+                    <span className="hover-anim">LinkedIn</span>
+                  </a>
                 </li>
                 <li>
-                  <a href="#0" className="hover-this"><span className="hover-anim">Instagram</span></a>
+                  <a href="#0" className="hover-this">
+                    <span className="hover-anim">Instagram</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -53,8 +63,13 @@ function Contact() {
                   </div>
                   <div className="col-12">
                     <div className="form-group">
-                      <textarea id="form_message" name="message" placeholder="Message" rows="4"
-                        required="required"></textarea>
+                      <textarea
+                        id="form_message"
+                        name="message"
+                        placeholder="Message"
+                        rows="4"
+                        required="required"
+                      ></textarea>
                     </div>
                     <div className="mt-30">
                       <button type="submit" className="butn butn-full butn-bord radius-30">
@@ -69,7 +84,7 @@ function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

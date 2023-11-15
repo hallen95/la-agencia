@@ -23,10 +23,10 @@ function PageAbout() {
   }, []);
 
   const headerMetadata = {
-    subTitle: "WHO WE ARE ?",
+    subTitle: 'WHO WE ARE ?',
     title: "We're a digital agency based in Valencia.",
-    text: "About Us"
-  }
+    text: 'About Us',
+  };
 
   return (
     <>
@@ -48,9 +48,9 @@ function PageAbout() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-PageAbout.getLayout = page => <Layout>{page}</Layout>
+PageAbout.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default PageAbout;

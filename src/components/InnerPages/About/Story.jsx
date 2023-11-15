@@ -24,13 +24,18 @@ function Story() {
           </div>
           <div className="col-lg-8">
             <div className="cont mt-80">
-              <h4>GeekFolio are digital marketing experts and can partner with you to implement tactical campaigns which engage and connect audiences whilst driving ROI for your brand. We are SEO and SEM professionals and have implemented successful search campaigns for clients which drive super-charge improvements in organic rankings, increase visits and grow revenue. </h4>
+              <h4>
+                GeekFolio are digital marketing experts and can partner with you to implement tactical campaigns which
+                engage and connect audiences whilst driving ROI for your brand. We are SEO and SEM professionals and
+                have implemented successful search campaigns for clients which drive super-charge improvements in
+                organic rankings, increase visits and grow revenue.{' '}
+              </h4>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Story
+export default Story;

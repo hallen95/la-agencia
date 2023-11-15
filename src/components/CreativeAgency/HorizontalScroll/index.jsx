@@ -8,16 +8,16 @@ function HzScroll({ lightMode }) {
   useEffect(() => {
     if (window.innerWidth > 991) {
       gsap.registerPlugin(ScrollTrigger);
-      let sections = gsap.utils.toArray(".panel");
+      let sections = gsap.utils.toArray('.panel');
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
-        ease: "none",
+        ease: 'none',
         scrollTrigger: {
-          trigger: ".thecontainer",
+          trigger: '.thecontainer',
           pin: true,
           scrub: 1,
-          end: () => "+=" + document.querySelector(".thecontainer").offsetWidth
-        }
+          end: () => '+=' + document.querySelector('.thecontainer').offsetWidth,
+        },
       });
     }
 
@@ -30,16 +30,16 @@ function HzScroll({ lightMode }) {
       location.reload();
     } else if (window.innerWidth > 991 && !document.querySelector('.thecontainer').style.maxHeight) {
       gsap.registerPlugin(ScrollTrigger);
-      let sections = gsap.utils.toArray(".panel");
+      let sections = gsap.utils.toArray('.panel');
       gsap.to(sections, {
         xPercent: -100 * (sections.length - 1),
-        ease: "none",
+        ease: 'none',
         scrollTrigger: {
-          trigger: ".thecontainer",
+          trigger: '.thecontainer',
           pin: true,
           scrub: 1,
-          end: () => "+=" + document.querySelector(".thecontainer")?.offsetWidth
-        }
+          end: () => '+=' + document.querySelector('.thecontainer')?.offsetWidth,
+        },
       });
     }
   }
@@ -50,7 +50,7 @@ function HzScroll({ lightMode }) {
       <Awards lightMode={lightMode} />
       <CallToAction lightMode={lightMode} />
     </section>
-  )
+  );
 }
 
-export default HzScroll
+export default HzScroll;

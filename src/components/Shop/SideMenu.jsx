@@ -6,10 +6,10 @@ function SideMenu() {
     const priceGap = 1000;
     const minPrice = parseInt(priceInput[0].value);
     const maxPrice = parseInt(priceInput[1].value);
-    const rangeInput = document.querySelectorAll(".range-input input")
+    const rangeInput = document.querySelectorAll('.range-input input');
 
     if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-      if (e.currentTarget.className === "input-min") {
+      if (e.currentTarget.className === 'input-min') {
         rangeInput[0].value = minPrice;
       } else {
         rangeInput[1].value = maxPrice;
@@ -18,16 +18,16 @@ function SideMenu() {
   }
 
   function handleRangeInput(e) {
-    const rangeInput = document.querySelectorAll(".range-input input");
-    const priceInput = document.querySelectorAll(".price-input input");
-    const range = document.querySelector(".slider-range .progress");
+    const rangeInput = document.querySelectorAll('.range-input input');
+    const priceInput = document.querySelectorAll('.price-input input');
+    const range = document.querySelector('.slider-range .progress');
     const priceGap = 1000;
 
     let minVal = parseInt(rangeInput[0].value);
     let maxVal = parseInt(rangeInput[1].value);
 
     if (maxVal - minVal < priceGap) {
-      if (e.currentTarget.className === "range-min") {
+      if (e.currentTarget.className === 'range-min') {
         rangeInput[0].value = maxVal - priceGap;
       } else {
         rangeInput[1].value = minVal + priceGap;
@@ -35,15 +35,14 @@ function SideMenu() {
     } else {
       priceInput[0].value = minVal;
       priceInput[1].value = maxVal;
-      range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-      range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
+      range.style.left = (minVal / rangeInput[0].max) * 100 + '%';
+      range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + '%';
     }
   }
 
   return (
     <div className="col-lg-3">
       <div className="sidebar md-mb80">
-
         <div className="item search mb-40">
           <form action="contact.php">
             <div className="form-group">
@@ -61,11 +60,21 @@ function SideMenu() {
           </div>
           <div className="dot-list">
             <ul className="rest">
-              <li><a href="#0">Technology</a></li>
-              <li><a href="#0">Accessories</a></li>
-              <li><a href="#0">Furniture</a></li>
-              <li><a href="#0">Clothes</a></li>
-              <li><a href="#0">Jewellery</a></li>
+              <li>
+                <a href="#0">Technology</a>
+              </li>
+              <li>
+                <a href="#0">Accessories</a>
+              </li>
+              <li>
+                <a href="#0">Furniture</a>
+              </li>
+              <li>
+                <a href="#0">Clothes</a>
+              </li>
+              <li>
+                <a href="#0">Jewellery</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -79,10 +88,24 @@ function SideMenu() {
               <div className="progress"></div>
             </div>
             <div className="range-input">
-              <input type="range" className="range-min" min="10" max="10000" defaultValue="10"
-                step="100" onInput={handleRangeInput} />
-              <input type="range" className="range-max" min="0" max="10000" defaultValue="7500"
-                step="100" onInput={handleRangeInput} />
+              <input
+                type="range"
+                className="range-min"
+                min="10"
+                max="10000"
+                defaultValue="10"
+                step="100"
+                onInput={handleRangeInput}
+              />
+              <input
+                type="range"
+                className="range-max"
+                min="0"
+                max="10000"
+                defaultValue="7500"
+                step="100"
+                onInput={handleRangeInput}
+              />
             </div>
             <div className="price-input d-flex align-items-center mt-15">
               <div>
@@ -186,10 +209,9 @@ function SideMenu() {
             <a href="#0">ThemesCamp</a>
           </div>
         </div>
-
       </div>
     </div>
-  )
+  );
 }
 
-export default SideMenu
+export default SideMenu;

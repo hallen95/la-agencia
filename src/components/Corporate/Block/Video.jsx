@@ -87,12 +87,12 @@ function Video({ lightMode }) {
                 <div className="rotate-circle fz-30 text-u">
                   <svg className="textcircle" viewBox="0 0 500 500">
                     <defs>
-                      <path id="textcircle"
-                        d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z">
-                      </path>
+                      <path id="textcircle" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"></path>
                     </defs>
                     <text>
-                      <textPath xlinkHref="#textcircle" textLength="900">Explore More - Explore More -</textPath>
+                      <textPath xlinkHref="#textcircle" textLength="900">
+                        Explore More - Explore More -
+                      </textPath>
                     </text>
                   </svg>
                 </div>
@@ -104,9 +104,15 @@ function Video({ lightMode }) {
           </div>
         </div>
       </div>
-      <ModalVideo videoId="AzwC6umvd1s" channel="youtube" isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} autoplay />
+      <ModalVideo
+        videoId="AzwC6umvd1s"
+        channel="youtube"
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        autoplay
+      />
     </div>
-  )
+  );
 }
 
-export default Video
+export default Video;

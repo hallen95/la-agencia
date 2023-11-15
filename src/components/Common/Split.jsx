@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class Split extends React.Component {
   target = React.createRef();
@@ -14,7 +14,12 @@ class Split extends React.Component {
 
   render() {
     if (this.props.tag === 'span') return <span ref={this.target}>{this.props.children}</span>;
-    else if (this.props.tag === 'a') return <a href={this.props.href} className={this.props.className} ref={this.target}>{this.props.children}</a>;
+    else if (this.props.tag === 'a')
+      return (
+        <a href={this.props.href} className={this.props.className} ref={this.target}>
+          {this.props.children}
+        </a>
+      );
     return <div ref={this.target}>{this.props.children}</div>;
   }
 }

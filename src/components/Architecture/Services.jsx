@@ -18,23 +18,21 @@ function Services({ lightMode }) {
           </div>
         </div>
         <div className="row">
-          {
-            data.map(item => (
-              <div className="col-lg-3 col-md-6" key={item.id}>
-                <div className="serv-item md-mb50">
-                  <div className="icon-img-60 mb-40">
-                    <img src={`/${lightMode ? 'light' : 'dark'}${item.image}`} alt="" />
-                  </div>
-                  <h5 className="mb-20">{item.title}</h5>
-                  <p>{item.text}</p>
+          {data.map((item) => (
+            <div className="col-lg-3 col-md-6" key={item.id}>
+              <div className="serv-item md-mb50">
+                <div className="icon-img-60 mb-40">
+                  <img src={`/${lightMode ? 'light' : 'dark'}${item.image}`} alt="" />
                 </div>
+                <h5 className="mb-20">{item.title}</h5>
+                <p>{item.text}</p>
               </div>
-            ))
-          }
+            </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Services
+export default Services;

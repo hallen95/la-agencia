@@ -1,9 +1,7 @@
 import React from 'react';
 
 function LinesTwo() {
-  return (
-    <div className="lines two-out"></div>
-  )
+  return <div className="lines two-out"></div>;
 }
 
-export default LinesTwo
+export default LinesTwo;

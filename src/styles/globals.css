@@ -14,7 +14,6 @@ body {
   transform: none;
 }
 
-
 .swiper-controls .swiper-button-prev,
 .swiper-controls .swiper-button-next {
   position: static;
@@ -55,11 +54,14 @@ body {
   margin: 0 7px;
 }
 
-.testim-clasic.light .swiper-pagination-bullet, .work-carsouel.light .swiper-pagination-bullet {
+.testim-clasic.light .swiper-pagination-bullet,
+.work-carsouel.light .swiper-pagination-bullet {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.swiper-pagination-bullet-active, .testim-clasic.light .swiper-pagination-bullet-active, .work-carsouel.light .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active,
+.testim-clasic.light .swiper-pagination-bullet-active,
+.work-carsouel.light .swiper-pagination-bullet-active {
   background: #c9f31d;
 }
 

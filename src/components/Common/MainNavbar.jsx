@@ -1,36 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { useTranslation } from "next-i18next";
-import Link from "next/link";
+import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'next-i18next';
+import Link from 'next/link';
 
 function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
-  const [selectedLanguage, setSelectedLanguage] = useState("es-ES");
+  const [selectedLanguage, setSelectedLanguage] = useState('es-ES');
 
-  const { t, i18n } = useTranslation("common");
+  const { t, i18n } = useTranslation('common');
 
   const languages = [
-    { code: "en-EN", name: "English" },
-    { code: "es-ES", name: "Spanish" },
+    { code: 'en-EN', name: 'English' },
+    { code: 'es-ES', name: 'Spanish' },
   ];
 
   const openList = (e) => {
     e.stopPropagation();
-    const options = document.querySelector(".select-options");
-    console.log("options.style.display", options.style.display);
-    if (options.style.display === "none" || !options.style.display)
-      options.style.display = "block";
-    else options.style.display = "none";
-    document.querySelector(".select-styled").classList.toggle("active");
+    const options = document.querySelector('.select-options');
+    console.log('options.style.display', options.style.display);
+    if (options.style.display === 'none' || !options.style.display) options.style.display = 'block';
+    else options.style.display = 'none';
+    document.querySelector('.select-styled').classList.toggle('active');
   };
 
   const handleItemClick = (e, lang) => {
     e.stopPropagation();
     handleLanguageChange(lang);
-    document.querySelector(".select-styled").classList.remove("active");
-    document.querySelector(".select-styled").innerHTML =
-      e.currentTarget.innerHTML;
-    document.querySelector("select").value =
-      e.currentTarget.getAttribute("rel");
-    document.querySelector(".select-options").style.display = "none";
+    document.querySelector('.select-styled').classList.remove('active');
+    document.querySelector('.select-styled').innerHTML = e.currentTarget.innerHTML;
+    document.querySelector('select').value = e.currentTarget.getAttribute('rel');
+    document.querySelector('.select-options').style.display = 'none';
   };
 
   const handleLanguageChange = (lang) => {
@@ -40,54 +37,50 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
 
   function handleScroll() {
     const bodyScroll = window.scrollY;
-    const navbar = document.querySelector(".navbar");
+    const navbar = document.querySelector('.navbar');
 
-    if (bodyScroll > 300) navbar.classList.add("nav-scroll");
-    else navbar.classList.remove("nav-scroll");
+    if (bodyScroll > 300) navbar.classList.add('nav-scroll');
+    else navbar.classList.remove('nav-scroll');
   }
 
   function handleDropdownMouseMove(event) {
-    event.currentTarget.querySelector(".dropdown-menu").classList.add("show");
+    event.currentTarget.querySelector('.dropdown-menu').classList.add('show');
   }
 
   function handleDropdownMouseLeave(event) {
-    event.currentTarget
-      .querySelector(".dropdown-menu")
-      .classList.remove("show");
+    event.currentTarget.querySelector('.dropdown-menu').classList.remove('show');
   }
 
   function handleDropdownSideMouseMove(event) {
-    event.currentTarget.querySelector(".dropdown-side").classList.add("show");
+    event.currentTarget.querySelector('.dropdown-side').classList.add('show');
   }
 
   function handleDropdownSideMouseLeave(event) {
-    event.currentTarget
-      .querySelector(".dropdown-side")
-      .classList.remove("show");
+    event.currentTarget.querySelector('.dropdown-side').classList.remove('show');
   }
 
   function toggleNavbar() {
-    document.querySelector(".navbar .navbar-collapse").classList.toggle("show");
+    document.querySelector('.navbar .navbar-collapse').classList.toggle('show');
   }
 
   function toggleSearch() {
-    let form = document.querySelector(".navbar .search-form");
-    let closeBtn = document.querySelector(".search-form .close-search");
+    let form = document.querySelector('.navbar .search-form');
+    let closeBtn = document.querySelector('.search-form .close-search');
 
-    form.classList.toggle("open");
-    if (form.classList.contains("open")) closeBtn.style.display = "block";
-    else closeBtn.style.display = "none";
+    form.classList.toggle('open');
+    if (form.classList.contains('open')) closeBtn.style.display = 'block';
+    else closeBtn.style.display = 'none';
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
     <nav
-      className={`navbar navbar-expand-lg ${curve ? "nav-crev" : ""} ${
-        noStatic ? "" : "static"
-      } ${mainBg ? "main-bg" : ""} ${subBg ? "sub-bg" : ""}`}
+      className={`navbar navbar-expand-lg ${curve ? 'nav-crev' : ''} ${noStatic ? '' : 'static'} ${
+        mainBg ? 'main-bg' : ''
+      } ${subBg ? 'sub-bg' : ''}`}
     >
       <div className="container">
         <a className="logo icon-img-100" href="#">
@@ -112,10 +105,7 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
           </span>
         </button>
 
-        <div
-          className="collapse navbar-collapse justify-content-center"
-          id="navbarSupportedContent"
-        >
+        <div className="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
           <ul className="navbar-nav">
             {/* <li className="nav-item dropdown" onMouseMove={handleDropdownMouseMove} onMouseLeave={handleDropdownMouseLeave}>
               <a className="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -212,28 +202,16 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
                 <span className="rolling-text">Pages</span>
               </a>
               <div className="dropdown-menu">
-                <Link
-                  className="dropdown-item"
-                  href={`/${lightMode ? "light" : "dark"}/page-about`}
-                >
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-about`}>
                   About
                 </Link>
-                <Link
-                  className="dropdown-item"
-                  href={`/${lightMode ? "light" : "dark"}/page-services`}
-                >
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-services`}>
                   Services
                 </Link>
-                <Link
-                  className="dropdown-item"
-                  href={`/${lightMode ? "light" : "dark"}/page-team`}
-                >
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-team`}>
                   Our Team
                 </Link>
-                <Link
-                  className="dropdown-item"
-                  href={`/${lightMode ? "light" : "dark"}/page-contact`}
-                >
+                <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/page-contact`}>
                   Contact Us
                 </Link>
               </div>
@@ -260,37 +238,21 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
                   onMouseLeave={handleDropdownSideMouseLeave}
                 >
                   <a href="#0">
-                    Classic Grid{" "}
-                    <i className="fas fa-angle-right icon-arrow"></i>
+                    Classic Grid <i className="fas fa-angle-right icon-arrow"></i>
                   </a>
                   <ul className="dropdown-side">
                     <li>
-                      <Link
-                        className="dropdown-item"
-                        href={`/${
-                          lightMode ? "light" : "dark"
-                        }/portfolio-grid-2`}
-                      >
+                      <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-grid-2`}>
                         Grid 2 Columns
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="dropdown-item"
-                        href={`/${
-                          lightMode ? "light" : "dark"
-                        }/portfolio-grid-3`}
-                      >
+                      <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-grid-3`}>
                         Grid 3 Columns
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="dropdown-item"
-                        href={`/${
-                          lightMode ? "light" : "dark"
-                        }/portfolio-grid-4`}
-                      >
+                      <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-grid-4`}>
                         Grid 4 Columns
                       </Link>
                     </li>
@@ -306,66 +268,39 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
                   </a>
                   <ul className="dropdown-side">
                     <li>
-                      <Link
-                        className="dropdown-item"
-                        href={`/${
-                          lightMode ? "light" : "dark"
-                        }/portfolio-masonry-2`}
-                      >
+                      <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-masonry-2`}>
                         Masonry 2 Columns
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="dropdown-item"
-                        href={`/${
-                          lightMode ? "light" : "dark"
-                        }/portfolio-masonry-3`}
-                      >
+                      <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-masonry-3`}>
                         Masonry 3 Columns
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        className="dropdown-item"
-                        href={`/${
-                          lightMode ? "light" : "dark"
-                        }/portfolio-masonry-4`}
-                      >
+                      <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-masonry-4`}>
                         Masonry 4 Columns
                       </Link>
                     </li>
                   </ul>
                 </li>
                 <li>
-                  <Link
-                    className="dropdown-item"
-                    href={`/${lightMode ? "light" : "dark"}/portfolio-metro`}
-                  >
+                  <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-metro`}>
                     Portfolio Metro
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="dropdown-item"
-                    href={`/${lightMode ? "light" : "dark"}/portfolio-modern`}
-                  >
+                  <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/portfolio-modern`}>
                     Modern Grid
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="dropdown-item"
-                    href={`/${lightMode ? "light" : "dark"}/project-details1`}
-                  >
+                  <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/project-details1`}>
                     Project Details 1
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    className="dropdown-item"
-                    href={`/${lightMode ? "light" : "dark"}/project-details2`}
-                  >
+                  <Link className="dropdown-item" href={`/${lightMode ? 'light' : 'dark'}/project-details2`}>
                     Project Details 2
                   </Link>
                 </li>
@@ -394,10 +329,7 @@ function MainNavbar({ lightMode, mainBg, subBg, noStatic, curve }) {
               </div>
             </li> */}
             <li className="nav-item">
-              <Link
-                className="nav-link"
-                href={`/${lightMode ? "light" : "dark"}/page-contact`}
-              >
+              <Link className="nav-link" href={`/${lightMode ? 'light' : 'dark'}/page-contact`}>
                 <span className="rolling-text">Contact</span>
               </Link>
             </li>

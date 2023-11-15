@@ -48,7 +48,7 @@ function Marq() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Marq
+export default Marq;

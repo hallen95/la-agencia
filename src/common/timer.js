@@ -7,12 +7,12 @@ export default function timer(date) {
   let countDown = new Date(date).getTime();
 
   setInterval(function () {
-    let now = new Date().getTime()
+    let now = new Date().getTime();
     let distance = countDown - now;
 
-    document.querySelector('#days').innerText = Math.floor(distance / (day));
-    document.querySelector('#hours').innerText = Math.floor((distance % (day)) / (hour));
-    document.querySelector('#minutes').innerText = Math.floor((distance % (hour)) / (minute));
-    document.querySelector('#seconds').innerText = Math.floor((distance % (minute)) / second);
-  }, second)
+    document.querySelector('#days').innerText = Math.floor(distance / day);
+    document.querySelector('#hours').innerText = Math.floor((distance % day) / hour);
+    document.querySelector('#minutes').innerText = Math.floor((distance % hour) / minute);
+    document.querySelector('#seconds').innerText = Math.floor((distance % minute) / second);
+  }, second);
 }

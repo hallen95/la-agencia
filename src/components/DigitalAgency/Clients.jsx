@@ -22,8 +22,8 @@ const swiperOptions = {
     1024: {
       slidesPerView: 5,
     },
-  }
-}
+  },
+};
 
 function Clients({ lightMode }) {
   const [loadSwiper, setLoadSwiper] = useState(false);
@@ -46,27 +46,24 @@ function Clients({ lightMode }) {
         </div>
         <div className="swiper5">
           <div id="content-carousel-container-unq-clients" className="swiper-container" data-swiper="container">
-            {
-              loadSwiper &&
+            {loadSwiper && (
               <Swiper {...swiperOptions} className="swiper-container" id="content-carousel-container-unq-clients">
-                {
-                  data.map((item) => (
-                    <SwiperSlide key={item}>
-                      <div className="item">
-                        <div className="img icon-img-100">
-                          <img src={`${lightMode ? '/light' : '/dark'}/${item}`} alt="" />
-                        </div>
+                {data.map((item) => (
+                  <SwiperSlide key={item}>
+                    <div className="item">
+                      <div className="img icon-img-100">
+                        <img src={`${lightMode ? '/light' : '/dark'}/${item}`} alt="" />
                       </div>
-                    </SwiperSlide>
-                  ))
-                }
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
-            }
+            )}
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Clients;

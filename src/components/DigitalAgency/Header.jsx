@@ -16,7 +16,9 @@ function Header({ lightMode }) {
             <div className="caption">
               <h1>Better design for your digital products.</h1>
               <div className="text mt-30">
-                <p>We are a creative studio specializing in UI/UX design, <br /> development and strategy.</p>
+                <p>
+                  We are a creative studio specializing in UI/UX design, <br /> development and strategy.
+                </p>
               </div>
               <Link href="/dark/page-services" className="butn butn-md butn-bg main-colorbg2 text-dark radius-30 mt-30">
                 <span>Explore More</span>
@@ -25,10 +27,16 @@ function Header({ lightMode }) {
           </div>
         </div>
       </div>
-      <div className="half-img-right bg-img ontop md-hide" data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/sass-img/header1.png`}></div>
-      <div className="bg-pattern bg-img" data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/graph.png`}></div>
+      <div
+        className="half-img-right bg-img ontop md-hide"
+        data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/sass-img/header1.png`}
+      ></div>
+      <div
+        className="bg-pattern bg-img"
+        data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/graph.png`}
+      ></div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

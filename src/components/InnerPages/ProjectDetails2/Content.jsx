@@ -22,8 +22,8 @@ const swiperOptions = {
     1024: {
       slidesPerView: 4,
     },
-  }
-}
+  },
+};
 
 function Content() {
   const [loadSwiper, setLoadSwiper] = useState(false);
@@ -36,8 +36,7 @@ function Content() {
     <div className="section-padding pt-0">
       <div className="container-fluid rest">
         <div className="swiper4">
-          {
-            loadSwiper &&
+          {loadSwiper && (
             <Swiper div id="content-carousel-container-unq-img" className="swiper-container" {...swiperOptions}>
               <SwiperSlide>
                 <div className="img">
@@ -70,7 +69,7 @@ function Content() {
                 </div>
               </SwiperSlide>
             </Swiper>
-          }
+          )}
         </div>
       </div>
       <div className="container mt-100">
@@ -78,14 +77,17 @@ function Content() {
           <div className="col-lg-8">
             <div className="text-center">
               <h5 className="fw-300">
-                Visual hierarchy is the principle of arranging elements to show their order of importance. Designers structure visual characteristics—e.g., menu icons—so users can understand information easily. By laying out elements logically and strategically, designers influence users’ perceptions and guide them to desired actions. Users notice larger elements more easily can convert.
+                Visual hierarchy is the principle of arranging elements to show their order of importance. Designers
+                structure visual characteristics—e.g., menu icons—so users can understand information easily. By laying
+                out elements logically and strategically, designers influence users’ perceptions and guide them to
+                desired actions. Users notice larger elements more easily can convert.
               </h5>
             </div>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Content
+export default Content;

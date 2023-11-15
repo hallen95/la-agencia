@@ -14,7 +14,7 @@ function Header({ data }) {
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

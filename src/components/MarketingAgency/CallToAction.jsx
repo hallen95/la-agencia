@@ -17,16 +17,21 @@ function CallToAction({ lightMode }) {
               <h2 className="fz-70 fw-700">
                 <span>Have a project in mind?</span> <br />
                 <span className="underline">
-                  <Link href="/dark/page-contact" className="main-color2">Let’s get to work.</Link>
+                  <Link href="/dark/page-contact" className="main-color2">
+                    Let’s get to work.
+                  </Link>
                 </span>
               </h2>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-pattern bg-img" data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/graph.png`}></div>
+      <div
+        className="bg-pattern bg-img"
+        data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/graph.png`}
+      ></div>
     </section>
-  )
+  );
 }
 
-export default CallToAction
+export default CallToAction;

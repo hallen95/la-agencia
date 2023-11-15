@@ -2,11 +2,11 @@ import React from 'react';
 
 function FAQ() {
   function openAccordion(event) {
-    document.querySelectorAll('.accordion-info').forEach(element => {
+    document.querySelectorAll('.accordion-info').forEach((element) => {
       element.classList.remove('active');
       element.style.maxHeight = 0;
       element.parentElement.classList.remove('active');
-    })
+    });
     event.currentTarget.parentElement.classList.add('active');
     event.currentTarget.nextElementSibling.style.maxHeight = '300px';
     event.currentTarget.nextElementSibling.classList.add('active');
@@ -29,7 +29,9 @@ function FAQ() {
                     <span className="up-text">Watch the creative process</span>
                   </span>
                   <span className="sideup-text">
-                    <span className="up-text"><span>behind our digital marketing</span>.</span>
+                    <span className="up-text">
+                      <span>behind our digital marketing</span>.
+                    </span>
                   </span>
                 </h2>
               </div>
@@ -40,7 +42,10 @@ function FAQ() {
                     <span className="ico"></span>
                   </div>
                   <div className="accordion-info">
-                    <p className="fz-14">Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.</p>
+                    <p className="fz-14">
+                      Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my
+                      whole.
+                    </p>
                   </div>
                 </div>
                 <div className="item mb-15 wow fadeInUp" data-wow-delay=".3s">
@@ -49,7 +54,10 @@ function FAQ() {
                     <span className="ico"></span>
                   </div>
                   <div className="accordion-info">
-                    <p className="fz-14">Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.</p>
+                    <p className="fz-14">
+                      Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my
+                      whole.
+                    </p>
                   </div>
                 </div>
                 <div className="item wow fadeInUp" data-wow-delay=".5s">
@@ -58,7 +66,10 @@ function FAQ() {
                     <span className="ico"></span>
                   </div>
                   <div className="accordion-info">
-                    <p className="fz-14">Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.</p>
+                    <p className="fz-14">
+                      Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my
+                      whole.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -67,7 +78,7 @@ function FAQ() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default FAQ
+export default FAQ;

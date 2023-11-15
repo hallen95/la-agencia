@@ -13,13 +13,15 @@ function Header() {
                 </span>
                 Awesome Template
               </h6>
-              <h1>A <span>perfect</span> Place for Your Creative <span>Portfolio</span>.</h1>
+              <h1>
+                A <span>perfect</span> Place for Your Creative <span>Portfolio</span>.
+              </h1>
             </div>
           </div>
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

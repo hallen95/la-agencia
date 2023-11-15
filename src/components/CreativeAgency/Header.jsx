@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { useTranslation } from "next-i18next";
+import React, { useEffect } from 'react';
+import { useTranslation } from 'next-i18next';
 //= Scripts
-import loadBackgroudImages from "@/common/loadBackgroudImages";
+import loadBackgroudImages from '@/common/loadBackgroudImages';
 
 function Header({ lightMode }) {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
 
   useEffect(() => {
     loadBackgroudImages();
@@ -19,12 +19,7 @@ function Header({ lightMode }) {
               <div className="img-assets1 parallax" data-speed="-0.01">
                 <img src="/dark/assets/imgs/svg-assets/claw.svg" alt="" />
               </div>
-              <img
-                src="/dark/assets/imgs/header/c1.jpg"
-                alt=""
-                data-speed="0.01"
-                className="parallax"
-              />
+              <img src="/dark/assets/imgs/header/c1.jpg" alt="" data-speed="0.01" className="parallax" />
             </div>
           </div>
           <div className="col-lg-6 valign">
@@ -45,7 +40,7 @@ function Header({ lightMode }) {
                     y2="50"
                     vectorEffect="non-scaling-stroke"
                     stroke="currentColor"
-                    style={{ "--index": 1, "--transform": "30deg" }}
+                    style={{ '--index': 1, '--transform': '30deg' }}
                   ></line>
                   <line
                     y1="50"
@@ -53,7 +48,7 @@ function Header({ lightMode }) {
                     y2="50"
                     vectorEffect="non-scaling-stroke"
                     stroke="currentColor"
-                    style={{ "--index": 2, "--transform": "60deg" }}
+                    style={{ '--index': 2, '--transform': '60deg' }}
                   ></line>
                   <line
                     y1="50"
@@ -61,7 +56,7 @@ function Header({ lightMode }) {
                     y2="50"
                     vectorEffect="non-scaling-stroke"
                     stroke="currentColor"
-                    style={{ "--index": 3, "--transform": "90deg" }}
+                    style={{ '--index': 3, '--transform': '90deg' }}
                   ></line>
                   <line
                     y1="50"
@@ -69,7 +64,7 @@ function Header({ lightMode }) {
                     y2="50"
                     vectorEffect="non-scaling-stroke"
                     stroke="currentColor"
-                    style={{ "--index": 4, "--transform": "120deg" }}
+                    style={{ '--index': 4, '--transform': '120deg' }}
                   ></line>
                   <line
                     y1="50"
@@ -77,7 +72,7 @@ function Header({ lightMode }) {
                     y2="50"
                     vectorEffect="non-scaling-stroke"
                     stroke="currentColor"
-                    style={{ "--index": 5, "--transform": "150deg" }}
+                    style={{ '--index': 5, '--transform': '150deg' }}
                   ></line>
                   <line
                     y1="50"
@@ -85,14 +80,14 @@ function Header({ lightMode }) {
                     y2="50"
                     vectorEffect="non-scaling-stroke"
                     stroke="currentColor"
-                    style={{ "--index": 6, "--transform": "180deg" }}
+                    style={{ '--index': 6, '--transform': '180deg' }}
                   ></line>
                 </svg>
               </div>
 
-              <h4 className="fw-300 mb-15">{t("h1")}</h4>
+              <h4 className="fw-300 mb-15">{t('h1')}</h4>
               <h1 className="fw-600 d-rotate wow">
-                <span className="rotate-text">{t("h2")}</span>
+                <span className="rotate-text">{t('h2')}</span>
               </h1>
             </div>
           </div>
@@ -106,10 +101,7 @@ function Header({ lightMode }) {
                   <div className="rotate-circle fz-30 text-u">
                     <svg className="textcircle" viewBox="0 0 500 500">
                       <defs>
-                        <path
-                          id="textcircle1"
-                          d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"
-                        ></path>
+                        <path id="textcircle1" d="M250,400 a150,150 0 0,1 0,-300a150,150 0 0,1 0,300Z"></path>
                       </defs>
                       <text>
                         <textPath xlinkHref="#textcircle1" textLength="900">
@@ -137,9 +129,7 @@ function Header({ lightMode }) {
       </div>
       <div
         className="bg-pattern bg-img"
-        data-background={`/${
-          lightMode ? "light" : "dark"
-        }/assets/imgs/patterns/graph.png`}
+        data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/graph.png`}
       ></div>
     </header>
   );

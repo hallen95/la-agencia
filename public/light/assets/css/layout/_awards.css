@@ -7,9 +7,9 @@
   width: 100%;
   text-align: center;
   margin: 0 10px;
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .skills-exp .skill-item .item:hover {
@@ -24,9 +24,9 @@
 .skills-exp .skill-item .item img {
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
-  -webkit-transition: all .4s;
-  -o-transition: all .4s;
-  transition: all .4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .skills-exp .exp-items .item .icon {

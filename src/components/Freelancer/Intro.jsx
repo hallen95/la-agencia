@@ -12,7 +12,7 @@ function Intro() {
     let mouseY = event.clientY;
     // Loop through each target element
     const parallaxTargets = document.querySelectorAll('.parallax');
-    parallaxTargets.forEach(target => {
+    parallaxTargets.forEach((target) => {
       // Get the target's speed
       let speed = target.dataset.speed;
       // Calculate the new position based on the mouse position and speed
@@ -30,7 +30,10 @@ function Intro() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-5 valign md-hide">
-            <h2 className="max-text" data-text=" Creative UI - UX Designer."> Creative UI - UX Designer.</h2>
+            <h2 className="max-text" data-text=" Creative UI - UX Designer.">
+              {' '}
+              Creative UI - UX Designer.
+            </h2>
           </div>
           <div className="col-lg-3 order2">
             <div className="img">
@@ -43,12 +46,16 @@ function Intro() {
           <div className="col-lg-3 valign order1">
             <div className="text-qoute">
               <span className="exp mb-30 main-bg">7+ Years Experience</span>
-              <p>I'm Creative Independent Web Developer, and I'm very passionate and dedicated to my work,
-                Using year-over-year design approaches and the latest technologies.</p>
+              <p>
+                I'm Creative Independent Web Developer, and I'm very passionate and dedicated to my work, Using
+                year-over-year design approaches and the latest technologies.
+              </p>
               <div className="stauts mt-50">
                 <div className="item d-flex align-items-center">
                   <h2 className="mr-20">12k</h2>
-                  <p className="fz-14">Happy Users <br /> Around World</p>
+                  <p className="fz-14">
+                    Happy Users <br /> Around World
+                  </p>
                 </div>
               </div>
             </div>
@@ -56,7 +63,7 @@ function Intro() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Intro
+export default Intro;

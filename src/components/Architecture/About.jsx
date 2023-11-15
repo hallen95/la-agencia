@@ -2,11 +2,11 @@ import React from 'react';
 
 function About() {
   function openAccordion(event) {
-    document.querySelectorAll('.accordion-info').forEach(element => {
+    document.querySelectorAll('.accordion-info').forEach((element) => {
       element.classList.remove('active');
       element.style.maxHeight = 0;
       element.parentElement.classList.remove('active');
-    })
+    });
     event.currentTarget.parentElement.classList.add('active');
     event.currentTarget.nextElementSibling.style.maxHeight = '300px';
     event.currentTarget.nextElementSibling.classList.add('active');
@@ -38,7 +38,10 @@ function About() {
                     <span className="ico"></span>
                   </div>
                   <div className="accordion-info">
-                    <p className="fz-14">Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.</p>
+                    <p className="fz-14">
+                      Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my
+                      whole.
+                    </p>
                   </div>
                 </div>
                 <div className="item mb-15 wow fadeInUp" data-wow-delay=".3s">
@@ -47,7 +50,10 @@ function About() {
                     <span className="ico"></span>
                   </div>
                   <div className="accordion-info">
-                    <p className="fz-14">Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.</p>
+                    <p className="fz-14">
+                      Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my
+                      whole.
+                    </p>
                   </div>
                 </div>
                 <div className="item wow fadeInUp" data-wow-delay=".5s">
@@ -56,7 +62,10 @@ function About() {
                     <span className="ico"></span>
                   </div>
                   <div className="accordion-info">
-                    <p className="fz-14">Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my whole.</p>
+                    <p className="fz-14">
+                      Taken possession of my entire soul, like these sweet mornings of spring which i enjoy with my
+                      whole.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -65,7 +74,7 @@ function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

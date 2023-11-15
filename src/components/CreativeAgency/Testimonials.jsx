@@ -18,9 +18,9 @@ const swiperOptions = {
   },
   navigation: {
     nextEl: '.testim-controls .swiper-button-next',
-    prevEl: '.testim-controls .swiper-button-prev'
-  }
-}
+    prevEl: '.testim-controls .swiper-button-prev',
+  },
+};
 
 function Testimonials({ lightMode }) {
   const [loadSwiper, setLoadSwiper] = useState(false);
@@ -72,51 +72,48 @@ function Testimonials({ lightMode }) {
           <div className="col-lg-9">
             <div className="testim-items section-padding">
               <div className="testim-swiper">
-                {
-                  loadSwiper &&
+                {loadSwiper && (
                   <Swiper {...swiperOptions} id="content-carousel-container-unq-testim" className="swiper-container">
-                    {
-                      data.map((item) => (
-                        <SwiperSlide key={item.id}>
-                          <div className="item">
-                            <div className="cont mb-40">
-                              <div className="rate-stars mb-30 fz-12">
-                                <span className="rate main-color2">
-                                  <i className="fas fa-star"></i>
-                                  <i className="fas fa-star"></i>
-                                  <i className="fas fa-star"></i>
-                                  <i className="fas fa-star"></i>
-                                  <i className="fas fa-star"></i>
-                                </span>
-                              </div>
-                              <h3 className="fw-400">{item.content}</h3>
+                    {data.map((item) => (
+                      <SwiperSlide key={item.id}>
+                        <div className="item">
+                          <div className="cont mb-40">
+                            <div className="rate-stars mb-30 fz-12">
+                              <span className="rate main-color2">
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                                <i className="fas fa-star"></i>
+                              </span>
                             </div>
-                            <div className="d-flex align-items-center">
-                              <div>
-                                <div className="img circle-80">
-                                  <img src={item.picture} alt="" className="circle-img" />
-                                </div>
+                            <h3 className="fw-400">{item.content}</h3>
+                          </div>
+                          <div className="d-flex align-items-center">
+                            <div>
+                              <div className="img circle-80">
+                                <img src={item.picture} alt="" className="circle-img" />
                               </div>
-                              <div className="ml-30">
-                                <div className="info">
-                                  <h6>{item.author}</h6>
-                                  <span className="main-color2 sub-title">{item.position}</span>
-                                </div>
+                            </div>
+                            <div className="ml-30">
+                              <div className="info">
+                                <h6>{item.author}</h6>
+                                <span className="main-color2 sub-title">{item.position}</span>
                               </div>
                             </div>
                           </div>
-                        </SwiperSlide>
-                      ))
-                    }
+                        </div>
+                      </SwiperSlide>
+                    ))}
                   </Swiper>
-                }
+                )}
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Testimonials;

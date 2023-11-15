@@ -10,7 +10,6 @@ import Header from '@/components/InnerPages/Contact/Header';
 import Form from '@/components/InnerPages/Contact/Form';
 import Footer from '@/components/Freelancer/Footer';
 
-
 function PageContact() {
   useEffect(() => {
     document.body.classList.add('main-bg');
@@ -31,9 +30,9 @@ function PageContact() {
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-PageContact.getLayout = page => <Layout>{page}</Layout>
+PageContact.getLayout = (page) => <Layout>{page}</Layout>;
 
 export default PageContact;

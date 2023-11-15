@@ -22,32 +22,30 @@ function Team() {
           </div>
         </div>
         <div className="row md-marg">
-          {
-            data.map((member, index) => (
-              <div className="col-lg-4" key={member.id}>
-                <div className={`item ${index !== data.length - 1 ? 'md-mb50' : ''}`}>
-                  <div className="img">
-                    <img src={member.picture} alt="" />
+          {data.map((member, index) => (
+            <div className="col-lg-4" key={member.id}>
+              <div className={`item ${index !== data.length - 1 ? 'md-mb50' : ''}`}>
+                <div className="img">
+                  <img src={member.picture} alt="" />
+                </div>
+                <div className="info d-flex align-items-center">
+                  <div>
+                    <div className="circle-50">
+                      <img src={member.picture} alt="" className="circle-img" />
+                    </div>
                   </div>
-                  <div className="info d-flex align-items-center">
-                    <div>
-                      <div className="circle-50">
-                        <img src={member.picture} alt="" className="circle-img" />
-                      </div>
-                    </div>
-                    <div className="cont ml-20">
-                      <span className="fz-12 opacity-8">{member.position}</span>
-                      <h6 className="fz-16">{member.name}</h6>
-                    </div>
+                  <div className="cont ml-20">
+                    <span className="fz-12 opacity-8">{member.position}</span>
+                    <h6 className="fz-16">{member.name}</h6>
                   </div>
                 </div>
               </div>
-            ))
-          }
+            </div>
+          ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Team
+export default Team;

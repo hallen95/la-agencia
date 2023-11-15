@@ -22,7 +22,9 @@ function Awards({ lightMode }) {
                       <h2 className="fz-60">20</h2>
                     </div>
                     <div className="cont ml-30">
-                      <h6 className="sub-title">Years of <br /> Experience</h6>
+                      <h6 className="sub-title">
+                        Years of <br /> Experience
+                      </h6>
                     </div>
                   </div>
                   <div className="img-icon">
@@ -38,12 +40,19 @@ function Awards({ lightMode }) {
                 <li className="d-flex">
                   <div>
                     <h6>Independent of the year nomination</h6>
-                    <span className="fz-14 opacity-8"><span className="date">2020</span> Awwwards</span>
+                    <span className="fz-14 opacity-8">
+                      <span className="date">2020</span> Awwwards
+                    </span>
                   </div>
                   <div className="ml-auto">
                     <Link href="/dark/page-about" className="arrow-icon">
                       <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z" fill={lightMode ? '#fff' : '#000'}></path>
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                          fill={lightMode ? '#fff' : '#000'}
+                        ></path>
                       </svg>
                     </Link>
                   </div>
@@ -51,12 +60,19 @@ function Awards({ lightMode }) {
                 <li className="d-flex">
                   <div>
                     <h6>Awwwards Site of the Day</h6>
-                    <span className="fz-14 opacity-8"><span className="date">2020</span> Awwwards</span>
+                    <span className="fz-14 opacity-8">
+                      <span className="date">2020</span> Awwwards
+                    </span>
                   </div>
                   <div className="ml-auto">
                     <Link href="/dark/page-about" className="arrow-icon">
                       <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z" fill={lightMode ? '#fff' : '#000'}></path>
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                          fill={lightMode ? '#fff' : '#000'}
+                        ></path>
                       </svg>
                     </Link>
                   </div>
@@ -64,12 +80,19 @@ function Awards({ lightMode }) {
                 <li className="d-flex">
                   <div>
                     <h6>CSSDA Website of the Day</h6>
-                    <span className="fz-14 opacity-8"><span className="date">2020</span> Awwwards</span>
+                    <span className="fz-14 opacity-8">
+                      <span className="date">2020</span> Awwwards
+                    </span>
                   </div>
                   <div className="ml-auto">
                     <Link href="/dark/page-about" className="arrow-icon">
                       <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z" fill={lightMode ? '#fff' : '#000'}></path>
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                          fill={lightMode ? '#fff' : '#000'}
+                        ></path>
                       </svg>
                     </Link>
                   </div>
@@ -77,12 +100,19 @@ function Awards({ lightMode }) {
                 <li className="d-flex">
                   <div>
                     <h6>Sydney Design Awards – Silver</h6>
-                    <span className="fz-14 opacity-8"><span className="date">2020</span> Awwwards</span>
+                    <span className="fz-14 opacity-8">
+                      <span className="date">2020</span> Awwwards
+                    </span>
                   </div>
                   <div className="ml-auto">
                     <Link href="/dark/page-about" className="arrow-icon">
                       <svg width="100%" height="100%" viewBox="0 0 9 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd" clipRule="evenodd" d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z" fill={lightMode ? '#fff' : '#000'}></path>
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M7.71108 3.78684L8.22361 4.29813L7.71263 4.80992L4.64672 7.87832L4.13433 7.36688L6.87531 4.62335H1.11181H0.750039H0.388177L0.382812 0.718232H1.10645L1.11082 3.90005H6.80113L4.12591 1.22972L4.63689 0.718262L7.71108 3.78684Z"
+                          fill={lightMode ? '#fff' : '#000'}
+                        ></path>
                       </svg>
                     </Link>
                   </div>
@@ -93,7 +123,7 @@ function Awards({ lightMode }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Awards;

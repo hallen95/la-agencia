@@ -9,7 +9,9 @@ function Portfolio() {
         <div className="sec-head md-mb80">
           <div className="row">
             <div className="col-lg-4">
-              <h6><span className="fz-14">04 . </span> Our Portfolio</h6>
+              <h6>
+                <span className="fz-14">04 . </span> Our Portfolio
+              </h6>
             </div>
             <div className="col-lg-5 offset-lg-3">
               <div className="text">
@@ -106,7 +108,7 @@ function Portfolio() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Portfolio
+export default Portfolio;
