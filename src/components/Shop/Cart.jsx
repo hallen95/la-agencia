@@ -48,9 +48,13 @@ function Cart({ lightMode }) {
                     </td>
                     <td data-column="	Quantity">
                       <div className="counter">
-                        <span className="down" onClick={decreaseCount}>-</span>
+                        <span className="down" onClick={decreaseCount}>
+                          -
+                        </span>
                         <input type="text" defaultValue="1" />
-                        <span className="up" onClick={increaseCount}>+</span>
+                        <span className="up" onClick={increaseCount}>
+                          +
+                        </span>
                       </div>
                     </td>
                     <td data-column="Subtotal">
@@ -80,9 +84,13 @@ function Cart({ lightMode }) {
                     </td>
                     <td data-column="	Quantity">
                       <div className="counter">
-                        <span className="down" onClick={decreaseCount}>-</span>
+                        <span className="down" onClick={decreaseCount}>
+                          -
+                        </span>
                         <input type="text" defaultValue="1" />
-                        <span className="up" onClick={increaseCount}>+</span>
+                        <span className="up" onClick={increaseCount}>
+                          +
+                        </span>
                       </div>
                     </td>
                     <td data-column="Subtotal">
@@ -118,13 +126,20 @@ function Cart({ lightMode }) {
                   <h4>Cart totals</h4>
                   <ul className="rest mt-30">
                     <li className="mb-5">
-                      <h6>Subtotal : <span className="fz-16 main-color4 ml-10">$130.00</span></h6>
+                      <h6>
+                        Subtotal : <span className="fz-16 main-color4 ml-10">$130.00</span>
+                      </h6>
                     </li>
                     <li>
-                      <h6>Total : <span className="fz-16 main-color4 ml-10">$260.00</span></h6>
+                      <h6>
+                        Total : <span className="fz-16 main-color4 ml-10">$260.00</span>
+                      </h6>
                     </li>
                   </ul>
-                  <Link href="/dark/shop-checkout" className={`${lightMode ? 'main-colorbg4' : 'bg-white'} butn butn-md butn-bg text-dark mt-30`}>
+                  <Link
+                    href="/dark/shop-checkout"
+                    className={`${lightMode ? 'main-colorbg4' : 'bg-white'} butn butn-md butn-bg text-dark mt-30`}
+                  >
                     <span className="text-u fz-13 fw-600">Proceed to checkout</span>
                   </Link>
                 </div>
@@ -134,7 +149,7 @@ function Cart({ lightMode }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Cart
+export default Cart;

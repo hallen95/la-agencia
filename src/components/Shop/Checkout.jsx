@@ -131,7 +131,10 @@ function Checkout({ lightMode }) {
                   </li>
                 </ul>
                 <div className="text mt-40">
-                  <p>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="#0">privacy policy</a>.</p>
+                  <p>
+                    Your personal data will be used to process your order, support your experience throughout this
+                    website, and for other purposes described in our <a href="#0">privacy policy</a>.
+                  </p>
                 </div>
                 <div className="mt-30">
                   <button type="submit" className="main-colorbg4 butn butn-md butn-bg text-dark">
@@ -144,7 +147,7 @@ function Checkout({ lightMode }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Checkout
+export default Checkout;

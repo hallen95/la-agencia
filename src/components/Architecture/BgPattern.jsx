@@ -8,8 +8,11 @@ function BgPattern({ lightMode }) {
   }, []);
 
   return (
-    <div className="bg-pattern bg-img" data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/bg-lines-1.svg`}></div>
-  )
+    <div
+      className="bg-pattern bg-img"
+      data-background={`/${lightMode ? 'light' : 'dark'}/assets/imgs/patterns/bg-lines-1.svg`}
+    ></div>
+  );
 }
 
-export default BgPattern
+export default BgPattern;

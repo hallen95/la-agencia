@@ -89,7 +89,7 @@ function Skills({ lightMode }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Skills
+export default Skills;

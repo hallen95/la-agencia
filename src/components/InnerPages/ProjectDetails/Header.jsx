@@ -48,7 +48,7 @@ function Header() {
       </div>
       <div className="bg-img" data-background="/dark/assets/imgs/works/projects/1/1.jpg"></div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

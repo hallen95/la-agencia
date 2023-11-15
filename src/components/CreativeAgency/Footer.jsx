@@ -5,8 +5,8 @@ import data from '@/data/app-data.json';
 function Footer({ lightMode }) {
   useEffect(() => {
     if (window.innerWidth > 991) {
-      gsap.set('.footer-container', { yPercent: -50 })
-      const uncover = gsap.timeline({ paused: true })
+      gsap.set('.footer-container', { yPercent: -50 });
+      const uncover = gsap.timeline({ paused: true });
       uncover.to('.footer-container', { yPercent: 0, ease: 'none' });
       ScrollTrigger.create({
         trigger: 'main',
@@ -97,9 +97,14 @@ function Footer({ lightMode }) {
               <div className="col-lg-8">
                 <div className="copyright d-flex">
                   <div className="ml-auto">
-                    <p className="fz-13">© 2023 Geekfolio is Proudly Powered by <span className="underline"><a
-                      href={data.author_link}
-                      target="_blank">{data.author}</a></span></p>
+                    <p className="fz-13">
+                      © 2023 Geekfolio is Proudly Powered by{' '}
+                      <span className="underline">
+                        <a href={data.author_link} target="_blank">
+                          {data.author}
+                        </a>
+                      </span>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -108,7 +113,7 @@ function Footer({ lightMode }) {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

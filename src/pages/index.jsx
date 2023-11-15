@@ -1,28 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 //= Packages
-import Head from "next/head";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Head from 'next/head';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 //= Layout
-import Layout from "@/layouts/default";
+import Layout from '@/layouts/default';
 //= Components
-import Loader from "@/components/Common/Loader";
-import Navbar from "@/components/Common/MainNavbar";
-import Header from "@/components/CreativeAgency/Header";
-import Marq from "@/components/CreativeAgency/Marq";
-import Intro from "@/components/CreativeAgency/Intro";
-import SectionImage from "@/components/CreativeAgency/SectionImage";
-import Services from "@/components/CreativeAgency/Services";
-import Portfolio from "@/components/CreativeAgency/Portfolio";
-import Testimonials from "@/components/CreativeAgency/Testimonials";
-import Team from "@/components/CreativeAgency/Team";
-import HzScroll from "@/components/CreativeAgency/HorizontalScroll";
-import Blog from "@/components/CreativeAgency/Blog";
-import Footer from "@/components/CreativeAgency/Footer";
+import Loader from '@/components/Common/Loader';
+import Navbar from '@/components/Common/MainNavbar';
+import Header from '@/components/CreativeAgency/Header';
+import Marq from '@/components/CreativeAgency/Marq';
+import Intro from '@/components/CreativeAgency/Intro';
+import SectionImage from '@/components/CreativeAgency/SectionImage';
+import Services from '@/components/CreativeAgency/Services';
+import Portfolio from '@/components/CreativeAgency/Portfolio';
+import Testimonials from '@/components/CreativeAgency/Testimonials';
+import Team from '@/components/CreativeAgency/Team';
+import HzScroll from '@/components/CreativeAgency/HorizontalScroll';
+import Blog from '@/components/CreativeAgency/Blog';
+import Footer from '@/components/CreativeAgency/Footer';
 
 function HomeCreativeAgency() {
   useEffect(() => {
-    document.body.classList.add("sub-bg");
-    return () => document.body.classList.remove("sub-bg");
+    document.body.classList.add('sub-bg');
+    return () => document.body.classList.remove('sub-bg');
   }, []);
 
   return (
@@ -53,7 +53,7 @@ function HomeCreativeAgency() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "footer"])),
+      ...(await serverSideTranslations(locale, ['common', 'footer'])),
       // Will be passed to the page component as props
     },
   };

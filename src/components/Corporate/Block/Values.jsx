@@ -10,11 +10,11 @@ function Values() {
 
   function handleShowProgressValues() {
     isInView({
-      selector: ".skill-progress .progres",
+      selector: '.skill-progress .progres',
       isElements: true,
       callback: (element) => {
         element.style.width = element.getAttribute('data-value');
-      }
+      },
     });
   }
 
@@ -30,8 +30,8 @@ function Values() {
             </div>
             <div className="cont ml-50">
               <h6>High Standerd</h6>
-              <p className="fz-15">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
+              <p className="fz-15">
+                Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
           </div>
@@ -43,8 +43,8 @@ function Values() {
             </div>
             <div className="cont ml-50">
               <h6>Ease of Communication</h6>
-              <p className="fz-15">Adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.
+              <p className="fz-15">
+                Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
             </div>
           </div>
@@ -53,7 +53,9 @@ function Values() {
       <div className="col-lg-6">
         <div className="cont">
           <h6 className="sub-title mb-15">Our Value</h6>
-          <h3 className="mb-15">Watch the creative process behind our <span className="stroke fw-700 opacity-7">digital marketing</span>.</h3>
+          <h3 className="mb-15">
+            Watch the creative process behind our <span className="stroke fw-700 opacity-7">digital marketing</span>.
+          </h3>
           <div className="skills mt-50">
             <div className="skills-box">
               <div className="skill-item mb-40">
@@ -73,7 +75,7 @@ function Values() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Values
+export default Values;

@@ -10,12 +10,18 @@ function VerticalParallax() {
 
   return (
     <section className="parallax-show">
-      <div className="bg-img inner parallaxie valign" data-background="/dark/assets/imgs/works/full/1.jpg" data-overlay-dark="3">
+      <div
+        className="bg-img inner parallaxie valign"
+        data-background="/dark/assets/imgs/works/full/1.jpg"
+        data-overlay-dark="3"
+      >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="caption text-center">
-                <h6 className="sub-title mb-30" data-swiper-parallax="-1000">© 2023 Branding</h6>
+                <h6 className="sub-title mb-30" data-swiper-parallax="-1000">
+                  © 2023 Branding
+                </h6>
                 <h1>
                   <Link href="/project-details1">Snack Midnight</Link>
                 </h1>
@@ -24,12 +30,18 @@ function VerticalParallax() {
           </div>
         </div>
       </div>
-      <div className="bg-img inner parallaxie valign" data-background="/dark/assets/imgs/works/full/2.jpg" data-overlay-dark="3">
+      <div
+        className="bg-img inner parallaxie valign"
+        data-background="/dark/assets/imgs/works/full/2.jpg"
+        data-overlay-dark="3"
+      >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="caption text-center">
-                <h6 className="sub-title mb-30" data-swiper-parallax="-1000">© 2023 Branding</h6>
+                <h6 className="sub-title mb-30" data-swiper-parallax="-1000">
+                  © 2023 Branding
+                </h6>
                 <h1>
                   <Link href="/project-details1">Fisherman Portrait</Link>
                 </h1>
@@ -38,12 +50,18 @@ function VerticalParallax() {
           </div>
         </div>
       </div>
-      <div className="bg-img inner parallaxie valign" data-background="/dark/assets/imgs/works/full/3.jpg" data-overlay-dark="3">
+      <div
+        className="bg-img inner parallaxie valign"
+        data-background="/dark/assets/imgs/works/full/3.jpg"
+        data-overlay-dark="3"
+      >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="caption text-center">
-                <h6 className="sub-title mb-30" data-swiper-parallax="-1000">© 2023 Branding</h6>
+                <h6 className="sub-title mb-30" data-swiper-parallax="-1000">
+                  © 2023 Branding
+                </h6>
                 <h1>
                   <Link href="/project-details1">Tribos Urbanas</Link>
                 </h1>
@@ -52,12 +70,18 @@ function VerticalParallax() {
           </div>
         </div>
       </div>
-      <div className="bg-img inner parallaxie valign" data-background="/dark/assets/imgs/works/full/4.jpg" data-overlay-dark="3">
+      <div
+        className="bg-img inner parallaxie valign"
+        data-background="/dark/assets/imgs/works/full/4.jpg"
+        data-overlay-dark="3"
+      >
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <div className="caption text-center">
-                <h6 className="sub-title mb-30" data-swiper-parallax="-1000">© 2023 Branding</h6>
+                <h6 className="sub-title mb-30" data-swiper-parallax="-1000">
+                  © 2023 Branding
+                </h6>
                 <h1>
                   <Link href="/project-details1">Monsoon in the city</Link>
                 </h1>
@@ -67,7 +91,7 @@ function VerticalParallax() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default VerticalParallax
+export default VerticalParallax;

@@ -13,7 +13,7 @@ function Content() {
       <Comments />
       <CommentsForm />
     </section>
-  )
+  );
 }
 
-export default Content
+export default Content;

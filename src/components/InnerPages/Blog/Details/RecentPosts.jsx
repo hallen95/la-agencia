@@ -27,7 +27,9 @@ function RecentPosts() {
                       <a href="#0">Free advertising for your online business.</a>
                     </h5>
                     <div className="tags colorbg mt-15">
-                      <a href="#0" className="me-1">Marketing</a>
+                      <a href="#0" className="me-1">
+                        Marketing
+                      </a>
                       <a href="#0">Design</a>
                     </div>
                   </div>
@@ -50,7 +52,9 @@ function RecentPosts() {
                       <a href="#0">Business meeting 2023 in San Francisco.</a>
                     </h5>
                     <div className="tags colorbg mt-15">
-                      <a href="#0" className="me-1">Marketing</a>
+                      <a href="#0" className="me-1">
+                        Marketing
+                      </a>
                       <a href="#0">Design</a>
                     </div>
                   </div>
@@ -61,7 +65,7 @@ function RecentPosts() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default RecentPosts
+export default RecentPosts;

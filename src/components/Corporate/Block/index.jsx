@@ -11,7 +11,7 @@ function Block({ lightMode }) {
         <Values />
       </div>
     </section>
-  )
+  );
 }
 
-export default Block
+export default Block;

@@ -7,9 +7,7 @@ function Overlay() {
     loadBackgroudImages();
   }, []);
 
-  return (
-    <div className="overlay bg-img" data-background="/landing-preview/img/header/overlay.webp"></div>
-  )
+  return <div className="overlay bg-img" data-background="/landing-preview/img/header/overlay.webp"></div>;
 }
 
-export default Overlay
+export default Overlay;

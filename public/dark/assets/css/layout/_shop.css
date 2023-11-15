@@ -31,8 +31,8 @@
   -moz-appearance: textfield;
 }
 
-.main-shop input[type="number"]::-webkit-outer-spin-button,
-.main-shop input[type="number"]::-webkit-inner-spin-button {
+.main-shop input[type='number']::-webkit-outer-spin-button,
+.main-shop input[type='number']::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
@@ -81,7 +81,7 @@
   -moz-appearance: none;
 }
 
-.main-shop input[type="range"]::-webkit-slider-thumb {
+.main-shop input[type='range']::-webkit-slider-thumb {
   height: 17px;
   width: 17px;
   border-radius: 50%;
@@ -92,7 +92,7 @@
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
 }
 
-.main-shop input[type="range"]::-moz-range-thumb {
+.main-shop input[type='range']::-moz-range-thumb {
   height: 17px;
   width: 17px;
   border: none;

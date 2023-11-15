@@ -1,9 +1,9 @@
 export default function parallaxie(selector, speed = 0.8, startPosition) {
   let elements = document.querySelectorAll(selector);
 
-  elements.forEach(elementBg => {
+  elements.forEach((elementBg) => {
     if (elementBg) {
-      let image = elementBg.getAttribute("data-background");
+      let image = elementBg.getAttribute('data-background');
       if (!image) {
         image = window.getComputedStyle(elementBg).backgroundImage;
       }
@@ -20,5 +20,5 @@ export default function parallaxie(selector, speed = 0.8, startPosition) {
         elementBg.style.backgroundPosition = `center ${position}px`;
       });
     }
-  })
+  });
 }

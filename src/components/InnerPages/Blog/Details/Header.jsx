@@ -14,9 +14,13 @@ function Header() {
           <div className="col-lg-10">
             <div className="caption">
               <div className="sub-title fz-12">
-                <a href="#0"><span>Marketing</span></a>
+                <a href="#0">
+                  <span>Marketing</span>
+                </a>
                 <span> , </span>
-                <a href="#0"><span>Design</span></a>
+                <a href="#0">
+                  <span>Design</span>
+                </a>
               </div>
               <h1 className="fz-55 mt-30">Network of wormholes colonies extraordinary claims require.</h1>
             </div>
@@ -54,7 +58,7 @@ function Header() {
       </div>
       <div className="background bg-img parallaxie mt-80" data-background="/dark/assets/imgs/blog/b2.jpg"></div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

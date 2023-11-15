@@ -28,14 +28,21 @@ function CommentsForm() {
                 </div>
                 <div className="col-12">
                   <div className="form-group mb-30">
-                    <textarea id="form_message" name="message" placeholder="Message" rows="4"
-                      required="required"></textarea>
+                    <textarea
+                      id="form_message"
+                      name="message"
+                      placeholder="Message"
+                      rows="4"
+                      required="required"
+                    ></textarea>
                   </div>
                 </div>
                 <div className="col-12 text-center mt-20">
                   <button type="submit" className="butn-circle">
                     <span className="full-width">
-                      <span className="full-width">Post A <br /> Comment</span>
+                      <span className="full-width">
+                        Post A <br /> Comment
+                      </span>
                     </span>
                     <img src="/dark/assets/imgs/svg-assets/circle-star.svg" alt="" className="circle-star" />
                   </button>
@@ -46,7 +53,7 @@ function CommentsForm() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default CommentsForm
+export default CommentsForm;

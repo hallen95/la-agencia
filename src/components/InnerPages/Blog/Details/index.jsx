@@ -9,7 +9,7 @@ function Details() {
       <Header />
       <Content />
     </>
-  )
+  );
 }
 
-export default Details
+export default Details;

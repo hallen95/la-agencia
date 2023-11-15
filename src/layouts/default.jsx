@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 //= Packages
-import Head from "next/head";
+import Head from 'next/head';
 //= Scripts
 import correctStylesheetsOrder from '@/common/correctStylesheetsOrder';
 //= Components
@@ -15,15 +15,14 @@ const DefaultLayout = ({ children, lightMode }) => {
   return (
     <>
       <Head>
-        {
-          lightMode ?
-            <>
-              <link rel="stylesheet" href="/light/assets/css/plugins.css" />
-              <link rel="stylesheet" href="/light/assets/css/style.css" />
-            </>
-            :
-            <link rel="stylesheet" href="/dark/assets/css/base.css" />
-        }
+        {lightMode ? (
+          <>
+            <link rel="stylesheet" href="/light/assets/css/plugins.css" />
+            <link rel="stylesheet" href="/light/assets/css/style.css" />
+          </>
+        ) : (
+          <link rel="stylesheet" href="/dark/assets/css/base.css" />
+        )}
       </Head>
 
       <Cursor />

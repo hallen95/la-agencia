@@ -17,9 +17,9 @@ const swiperOptions = {
   },
   navigation: {
     nextEl: '.testim-controls .swiper-button-next',
-    prevEl: '.testim-controls .swiper-button-prev'
-  }
-}
+    prevEl: '.testim-controls .swiper-button-prev',
+  },
+};
 
 function Testimonials({ lightMode }) {
   const [loadSwiper, setLoadSwiper] = useState(false);
@@ -35,44 +35,43 @@ function Testimonials({ lightMode }) {
           <div className="col-lg-12">
             <div className="testim">
               <div className="testim-swiper">
-                {
-                  loadSwiper &&
+                {loadSwiper && (
                   <Swiper {...swiperOptions} id="content-carousel-container-unq-testim" className="swiper-container">
-                    {
-                      data.map((item) => (
-                        <SwiperSlide key={item.id}>
-                          <div className="item">
-                            <div className="row">
-                              <div className="col-md-4">
-                                <div className="author-info valign">
-                                  <div className="full-width">
-                                    <div className="img circle-120 m-auto mb-30">
-                                      <img src={item.picture} alt=""
-                                        className="circle-img" />
-                                    </div>
-                                    <div className="info">
-                                      <h6>{item.name}</h6>
-                                      <p className="sub-title">{item.position}</p>
-                                    </div>
-                                    <div className="arrow main-bg"></div>
+                    {data.map((item) => (
+                      <SwiperSlide key={item.id}>
+                        <div className="item">
+                          <div className="row">
+                            <div className="col-md-4">
+                              <div className="author-info valign">
+                                <div className="full-width">
+                                  <div className="img circle-120 m-auto mb-30">
+                                    <img src={item.picture} alt="" className="circle-img" />
                                   </div>
-                                </div>
-                              </div>
-                              <div className="col-md-8">
-                                <div className="cont">
-                                  <div className="mb-30 icon-img-80 opacity-1">
-                                    <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/quote.png`} alt="" />
+                                  <div className="info">
+                                    <h6>{item.name}</h6>
+                                    <p className="sub-title">{item.position}</p>
                                   </div>
-                                  <h4 className="fw-300">{item.content}</h4>
+                                  <div className="arrow main-bg"></div>
                                 </div>
                               </div>
                             </div>
+                            <div className="col-md-8">
+                              <div className="cont">
+                                <div className="mb-30 icon-img-80 opacity-1">
+                                  <img
+                                    src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/quote.png`}
+                                    alt=""
+                                  />
+                                </div>
+                                <h4 className="fw-300">{item.content}</h4>
+                              </div>
+                            </div>
                           </div>
-                        </SwiperSlide>
-                      ))
-                    }
+                        </div>
+                      </SwiperSlide>
+                    ))}
                   </Swiper>
-                }
+                )}
               </div>
               <div className="swiper-controls">
                 <div className="row">
@@ -81,13 +80,19 @@ function Testimonials({ lightMode }) {
                       <div className="swiper-controls">
                         <div className="swiper-button-prev">
                           <span className="left">
-                            <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/arrow-right-top.svg`} alt="" />
+                            <img
+                              src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/arrow-right-top.svg`}
+                              alt=""
+                            />
                           </span>
                         </div>
                         <div className="swiper-pagination"></div>
                         <div className="swiper-button-next">
                           <span className="right">
-                            <img src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/arrow-right-top.svg`} alt="" />
+                            <img
+                              src={`/${lightMode ? 'light' : 'dark'}/assets/imgs/svg-assets/arrow-right-top.svg`}
+                              alt=""
+                            />
                           </span>
                         </div>
                       </div>
@@ -100,7 +105,7 @@ function Testimonials({ lightMode }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Testimonials;

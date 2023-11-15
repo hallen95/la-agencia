@@ -12,8 +12,8 @@ const swiperOptions = {
   loop: true,
   autoplay: true,
   spaceBetween: 60,
-  speed: 1000
-}
+  speed: 1000,
+};
 
 function Pages() {
   const [loadSwiper, setLoadSwiper] = useState(false);
@@ -26,26 +26,23 @@ function Pages() {
     <section className="pages section-padding position-re ontop">
       <div className="container-fluid">
         <div className="swiper3">
-          {
-            loadSwiper &&
+          {loadSwiper && (
             <Swiper {...swiperOptions}>
-              {
-                data.map((item) => (
-                  <SwiperSlide key={item.id}>
-                    <div className="item">
-                      <Link href={item.link}>
-                        <img src={item.image} alt="" />
-                      </Link>
-                    </div>
-                  </SwiperSlide>
-                ))
-              }
+              {data.map((item) => (
+                <SwiperSlide key={item.id}>
+                  <div className="item">
+                    <Link href={item.link}>
+                      <img src={item.image} alt="" />
+                    </Link>
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
-          }
+          )}
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Pages;

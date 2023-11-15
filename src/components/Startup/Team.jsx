@@ -25,8 +25,8 @@ const swiperOptions = {
     1024: {
       slidesPerView: 4,
     },
-  }
-}
+  },
+};
 
 function Team() {
   const [loadSwiper, setLoadSwiper] = useState(false);
@@ -52,9 +52,9 @@ function Team() {
       sticky_item.style.top = '0px';
       sticky_item.style.width = width + 'px';
       sticky_item.classList.add('is_stuck');
-      if (sticky_item.nextElementSibling.id !== "placeholder") {
+      if (sticky_item.nextElementSibling.id !== 'placeholder') {
         const placeholderElement = document.createElement('div');
-        placeholderElement.id = "placeholder";
+        placeholderElement.id = 'placeholder';
         placeholderElement.style.height = height + 'px';
         placeholderElement.style.width = width + 'px';
         sticky_item.after(placeholderElement);
@@ -70,7 +70,7 @@ function Team() {
       sticky_item.style.bottom = 'unset';
       sticky_item.style.width = 'auto';
       sticky_item.classList.remove('is_stuck');
-      if (sticky_item.nextElementSibling.id === "placeholder") sticky_item.nextElementSibling.remove();
+      if (sticky_item.nextElementSibling.id === 'placeholder') sticky_item.nextElementSibling.remove();
     }
   }
 
@@ -82,76 +82,64 @@ function Team() {
             <div className="sec-head-lg text-center text-u mb-80" id="sticky_item">
               <h2>Team</h2>
             </div>
-            <div className="swiper4"
-            >
-              {
-                loadSwiper &&
+            <div className="swiper4">
+              {loadSwiper && (
                 <Swiper {...swiperOptions} id="content-carousel-container-unq-team" className="swiper-container">
-                  {
-                    data.map((item) => (
-                      <SwiperSlide key={item.id}>
-                        <div className="item">
-                          <div className="img">
-                            <img src={item.image} alt="" />
-                          </div>
-                          <div className="info">
-                            <div className="main-marq team-position">
-                              <div className="slide-har st1 non-strok">
-                                <div className="box">
-                                  {
-                                    new Array(5).fill().map((_, i) => (
-                                      <div className="item" key={i}>
-                                        <h4>{item.position}</h4>
-                                      </div>
-                                    ))
-                                  }
-                                </div>
-                                <div className="box">
-                                  {
-                                    new Array(5).fill().map((_, i) => (
-                                      <div className="item" key={i}>
-                                        <h4>{item.position}</h4>
-                                      </div>
-                                    ))
-                                  }
-                                </div>
+                  {data.map((item) => (
+                    <SwiperSlide key={item.id}>
+                      <div className="item">
+                        <div className="img">
+                          <img src={item.image} alt="" />
+                        </div>
+                        <div className="info">
+                          <div className="main-marq team-position">
+                            <div className="slide-har st1 non-strok">
+                              <div className="box">
+                                {new Array(5).fill().map((_, i) => (
+                                  <div className="item" key={i}>
+                                    <h4>{item.position}</h4>
+                                  </div>
+                                ))}
+                              </div>
+                              <div className="box">
+                                {new Array(5).fill().map((_, i) => (
+                                  <div className="item" key={i}>
+                                    <h4>{item.position}</h4>
+                                  </div>
+                                ))}
                               </div>
                             </div>
-                            <div className="main-marq team-name">
-                              <div className="slide-har st1 non-strok">
-                                <div className="box">
-                                  {
-                                    new Array(5).fill().map((_, i) => (
-                                      <div className="item" key={i}>
-                                        <h4>{item.name}</h4>
-                                      </div>
-                                    ))
-                                  }
-                                </div>
-                                <div className="box">
-                                  {
-                                    new Array(5).fill().map((_, i) => (
-                                      <div className="item" key={i}>
-                                        <h4>{item.name}</h4>
-                                      </div>
-                                    ))
-                                  }
-                                </div>
+                          </div>
+                          <div className="main-marq team-name">
+                            <div className="slide-har st1 non-strok">
+                              <div className="box">
+                                {new Array(5).fill().map((_, i) => (
+                                  <div className="item" key={i}>
+                                    <h4>{item.name}</h4>
+                                  </div>
+                                ))}
+                              </div>
+                              <div className="box">
+                                {new Array(5).fill().map((_, i) => (
+                                  <div className="item" key={i}>
+                                    <h4>{item.name}</h4>
+                                  </div>
+                                ))}
                               </div>
                             </div>
                           </div>
                         </div>
-                      </SwiperSlide>
-                    ))
-                  }
+                      </div>
+                    </SwiperSlide>
+                  ))}
                 </Swiper>
-              }
+              )}
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default Team;

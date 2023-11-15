@@ -47,7 +47,10 @@ function Intro() {
           </div>
           <div className="col-lg-5 rest">
             <div className="text valign">
-              <p className="fz-14">Our area of practice is quite wide: design, development. The experts who work at our web design studio know exactly how to make your project unique, fresh, and profitable.</p>
+              <p className="fz-14">
+                Our area of practice is quite wide: design, development. The experts who work at our web design studio
+                know exactly how to make your project unique, fresh, and profitable.
+              </p>
             </div>
           </div>
         </div>
@@ -81,7 +84,7 @@ function Intro() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Intro
+export default Intro;

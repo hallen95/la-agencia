@@ -13,7 +13,7 @@ function List() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default List
+export default List;

@@ -10,7 +10,9 @@ function About() {
               <h6 className="sub-title opacity-8 wow fadeInUp">About Us.</h6>
               <h2 className="d-slideup wow">
                 <span className="sideup-text">
-                  <span className="up-text">We are a <span className="sub-font">full–service</span></span>
+                  <span className="up-text">
+                    We are a <span className="sub-font">full–service</span>
+                  </span>
                 </span>
                 <span className="sideup-text">
                   <span className="up-text">creative studio</span>
@@ -20,7 +22,10 @@ function About() {
                 </span>
               </h2>
               <div className="text mt-20 wow fadeIn" data-wow-delay=".5s">
-                <p>Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Wiusmod tempor incididunt.</p>
+                <p>
+                  Adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                  veniam, quis nostrud. Wiusmod tempor incididunt.
+                </p>
               </div>
               <div className="stutas pt-40 mt-40 bord-thin-top">
                 <div className="row">
@@ -30,7 +35,9 @@ function About() {
                         <h2 className="stroke fw-800">12k</h2>
                       </div>
                       <div>
-                        <h6 className="sub-title ls1 opacity-8">Happy Users <br /> Around World</h6>
+                        <h6 className="sub-title ls1 opacity-8">
+                          Happy Users <br /> Around World
+                        </h6>
                       </div>
                     </div>
                   </div>
@@ -40,7 +47,9 @@ function About() {
                         <h2 className="stroke fw-800">30k</h2>
                       </div>
                       <div>
-                        <h6 className="sub-title ls1 opacity-8">Projects <br /> Already Done</h6>
+                        <h6 className="sub-title ls1 opacity-8">
+                          Projects <br /> Already Done
+                        </h6>
                       </div>
                     </div>
                   </div>
@@ -60,7 +69,7 @@ function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default About
+export default About;

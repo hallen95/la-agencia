@@ -13,7 +13,7 @@ function Product() {
         <RelatedProducts />
       </div>
     </section>
-  )
+  );
 }
 
-export default Product
+export default Product;

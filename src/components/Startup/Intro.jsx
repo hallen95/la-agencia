@@ -12,9 +12,13 @@ function Intro() {
           </div>
           <div className="col-lg-5 valign">
             <div className="cont md-mb50">
-              <h6 className="mb-15"><span className="fz-14">01 . </span> Company</h6>
-              <p>We craft premium digital work for web, mobile and experiential with creative agencies and
-                global brands alike – putting passion, pride and plenty of elbow</p>
+              <h6 className="mb-15">
+                <span className="fz-14">01 . </span> Company
+              </h6>
+              <p>
+                We craft premium digital work for web, mobile and experiential with creative agencies and global brands
+                alike – putting passion, pride and plenty of elbow
+              </p>
 
               <div className="stauts d-flex align-items-center mt-80">
                 <div>
@@ -36,7 +40,7 @@ function Intro() {
         </div>
       </div>
     </section>
-  )
+  );
 }
 
-export default Intro
+export default Intro;

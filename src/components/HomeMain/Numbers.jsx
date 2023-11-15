@@ -12,13 +12,17 @@ function Numbers() {
         </div>
         <div className="col-lg-3 col-md-6 d-flex justify-content-around">
           <div className="item md-mb50">
-            <h2 className="fw-800">4<span className="fz-80 fw-600">k</span></h2>
+            <h2 className="fw-800">
+              4<span className="fz-80 fw-600">k</span>
+            </h2>
             <h6>Projects Complated</h6>
           </div>
         </div>
         <div className="col-lg-3 col-md-6 d-flex justify-content-around">
           <div className="item sm-mb50">
-            <h2 className="fw-800 stroke">9<span className="fz-80 fw-600">k</span></h2>
+            <h2 className="fw-800 stroke">
+              9<span className="fz-80 fw-600">k</span>
+            </h2>
             <h6>Happy Customers</h6>
           </div>
         </div>
@@ -30,7 +34,7 @@ function Numbers() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Numbers
+export default Numbers;

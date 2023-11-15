@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Comments() {
   return (
@@ -25,8 +25,10 @@ function Comments() {
                     <div className="cont">
                       <h6 className="line-height-1">Megan fox</h6>
                       <span className="fz-12 ls1 text-u mb-15">14 sept 2021, 07:00 AM</span>
-                      <p className="fz-14">Ut elementum turpis lorem, id vulputate risus consequat vitae. Morbi eget
-                        urna imperdiet, pellentesque nulla id, tempus mauris.</p>
+                      <p className="fz-14">
+                        Ut elementum turpis lorem, id vulputate risus consequat vitae. Morbi eget urna imperdiet,
+                        pellentesque nulla id, tempus mauris.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -51,8 +53,10 @@ function Comments() {
                     <div className="cont">
                       <h6 className="line-height-1">Megan fox</h6>
                       <span className="fz-12 ls1 text-u mb-15">14 sept 2021, 07:00 AM</span>
-                      <p className="fz-14">Ut elementum turpis lorem, id vulputate risus consequat vitae. Morbi eget
-                        urna imperdiet, pellentesque nulla id, tempus mauris.</p>
+                      <p className="fz-14">
+                        Ut elementum turpis lorem, id vulputate risus consequat vitae. Morbi eget urna imperdiet,
+                        pellentesque nulla id, tempus mauris.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -69,7 +73,7 @@ function Comments() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Comments
+export default Comments;
